@@ -23,8 +23,6 @@ export async function POST(request) {
       .map(match => match.metadata.text)
       .join('\n');
 
-    console.log(context);
-
     // Generate completion with context
     const completion = await openai.chat.completions.create({
       model: "ft:gpt-4o-mini-2024-07-18:argot::AXEhwFH8",
